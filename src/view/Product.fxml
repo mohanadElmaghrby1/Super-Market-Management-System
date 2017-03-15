@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductController">
+   <children>
+      <BorderPane layoutX="153.0" layoutY="71.0" prefHeight="522.0" prefWidth="1105.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="productTable" prefHeight="304.0" prefWidth="966.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="name" prefWidth="154.0" text="name" />
+                  <TableColumn fx:id="quantity" prefWidth="159.0" text="quantity" />
+                  <TableColumn fx:id="expireDate" prefWidth="246.0" text="expireDate" />
+                  <TableColumn fx:id="payPrice" minWidth="0.0" prefWidth="177.0" text="payPrice" />
+                  <TableColumn fx:id="sellPrice" prefWidth="173.0" text="sellPrice" />
+                  <TableColumn fx:id="startDate" prefWidth="117.0" />
+               </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox prefHeight="74.0" prefWidth="952.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane alignment="TOP_RIGHT" prefHeight="74.0" prefWidth="949.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="568.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="675.0" minWidth="10.0" prefWidth="381.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="55.0" prefWidth="538.0" GridPane.columnIndex="1">
+                           <children>
+                              <AnchorPane prefHeight="74.0" prefWidth="403.0">
+                                 <children>
+                                    <Button layoutX="308.0" layoutY="23.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="24.0" prefWidth="102.0" text="Delete" />
+                                    <TextField fx:id="productDeleteText" layoutX="62.0" layoutY="24.0" promptText="product id" />
+                                 </children>
+                              </AnchorPane>
+                           </children></HBox>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="74.0" prefWidth="570.0">
+                                 <children>
+                                    <TextField fx:id="productIdSearchText" layoutX="178.0" layoutY="24.0" prefHeight="26.0" prefWidth="238.0" promptText="product id" />
+                                    <Button layoutX="450.0" layoutY="24.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="102.0" text="search" />
+                                    <Button layoutY="24.0" mnemonicParsing="false" onAction="#refresh" text="refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addNewProduct" text="Add New Product" />
+                  <Button mnemonicParsing="false" onAction="#updateProduct" text="Update" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

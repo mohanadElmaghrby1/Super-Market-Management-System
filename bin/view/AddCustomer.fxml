@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="649.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerController">
+   <children>
+      <HBox alignment="CENTER" layoutX="81.0" layoutY="9.0" prefHeight="633.0" prefWidth="517.0">
+         <children>
+            <AnchorPane prefHeight="514.0" prefWidth="557.0">
+               <children>
+                  <GridPane prefHeight="515.0" prefWidth="472.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="72.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="162.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="28.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="26.0" text=" Id :" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <Label prefHeight="16.0" prefWidth="114.0" text="First Name :" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <Label text="Last NAme" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <Label text="Phone" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <Label text="Payments" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <AnchorPane prefHeight="71.0" prefWidth="152.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="16" />
+                        <AnchorPane prefHeight="102.0" prefWidth="286.0" GridPane.columnSpan="3" GridPane.rowIndex="13" GridPane.rowSpan="2">
+                           <children>
+                              <Button fx:id="btnSubmit" layoutX="80.0" layoutY="76.0" mnemonicParsing="false" onAction="#insertCustomerToDataBase" prefHeight="39.0" prefWidth="137.0" text="submit" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="5">
+                           <children>
+                              <Label fx:id="statusLbl" layoutX="68.0" layoutY="33.0" prefHeight="86.0" prefWidth="164.0" textFill="#0b4a07">
+                                 <font>
+                                    <Font name="Abyssinica SIL" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="customerIdText" promptText="customer Id" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="CustomerFirstNameText" promptText="custmer First Name" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="customerLastNameText" promptText="custmer Last Name" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                        <TextField fx:id="customerPhoneText" promptText="Customer Phone" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+                        <TextField fx:id="customerPaymentsText" promptText="Payments" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                        <Button fx:id="btnClrUsrName" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../style/btnOnText.css" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Button fx:id="btnClrFullName" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../style/btnOnText.css" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <Button fx:id="btnClrEmail" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../style/btnOnText.css" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                        <Button fx:id="btnClrPhone" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../style/btnOnText.css" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                        <Button fx:id="btnClrSalary" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../style/btnOnText.css" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../style/application.css" />
+      <URL value="@../style/otherFrames.css" />
+   </stylesheets>
+</AnchorPane>

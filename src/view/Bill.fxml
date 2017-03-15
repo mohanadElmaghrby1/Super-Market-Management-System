@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="controller.BillController">
+   <children>
+      <BorderPane prefHeight="522.0" prefWidth="1105.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="courseTable" prefHeight="304.0" prefWidth="966.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="117.0" text="productId" />
+                  <TableColumn fx:id="subject" prefWidth="145.0" text="ProductName" />
+                  <TableColumn fx:id="instructorId" prefWidth="145.0" text="ItemPrice" />
+                  <TableColumn fx:id="createDate" prefWidth="140.0" text="Quantity" />
+                  <TableColumn fx:id="numberOfStudents" minWidth="0.0" prefWidth="119.0" text="TotalPrice" />
+                  <TableColumn fx:id="price" prefWidth="114.0" text="date" />
+                  <TableColumn fx:id="lap" minWidth="0.0" prefWidth="154.0" text="time" />
+                  <TableColumn fx:id="freeSpaces" prefWidth="129.0" text="free spaces" />
+               </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox prefHeight="74.0" prefWidth="952.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="74.0" prefWidth="1108.0">
+                     <children>
+                        <Label layoutX="654.0" layoutY="4.0" prefHeight="26.0" prefWidth="75.0" text="Product Id">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="740.0" layoutY="4.0" prefHeight="26.0" prefWidth="170.0" promptText="id" />
+                        <Label layoutX="661.0" layoutY="35.0" prefHeight="26.0" prefWidth="84.0" text="Quantity">
+                           <font>
+                              <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="739.0" layoutY="36.0" prefHeight="26.0" prefWidth="171.0" promptText="products number" />
+                        <Button layoutX="941.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="146.0" text="add to order" />
+                        <Button layoutX="14.0" layoutY="24.0" mnemonicParsing="false" text="refresh" />
+                        <TextField layoutX="147.0" layoutY="17.0" promptText="bill id " />
+                        <Button layoutX="384.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" text="Search" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="72.0" prefWidth="1110.0">
+                     <children>
+                        <Button layoutX="953.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Delete" />
+                        <Button layoutX="775.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Update" />
+                        <Button layoutX="20.0" layoutY="24.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="217.0" text="Save Bill" />
+                        <Label layoutX="283.0" layoutY="23.0" prefHeight="28.0" prefWidth="113.0" text="Bill Total Price :" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="427.0" layoutY="22.0" prefHeight="26.0" prefWidth="180.0" promptText="bill price" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

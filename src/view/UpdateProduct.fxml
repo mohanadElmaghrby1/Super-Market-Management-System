@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane stylesheets="@../style/otherFrames.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="controller.UpdateProductController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="587.0" prefWidth="625.0">
+         <children>
+            <GridPane layoutX="75.0" layoutY="11.0" prefHeight="543.0" prefWidth="489.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="168.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="7.0" prefWidth="11.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="0.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="162.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="28.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="16.0" prefWidth="46.0" text=" Id :" GridPane.columnSpan="2" />
+                  <Label prefHeight="16.0" prefWidth="101.0" text="Product Name" GridPane.rowIndex="2" />
+                  <Label prefHeight="16.0" prefWidth="89.0" text="Pay Price" GridPane.rowIndex="6" />
+                  <Label prefHeight="16.0" prefWidth="125.0" text="Quantity" GridPane.rowIndex="4" />
+                  <Label text="Sell Price  :" GridPane.rowIndex="8" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowSpan="5" />
+                  <TextField fx:id="idText" prefWidth="181.0" promptText="product Id" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="nameText" promptText="Product Name" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                  <TextField fx:id="quantityText" promptText="Quantity" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                  <TextField fx:id="payPriceText" promptText="Pay Price" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+                  <TextField fx:id="sellPriceText" promptText="Sell Price" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#search" prefHeight="33.0" prefWidth="117.0" text="search" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+                  <AnchorPane prefHeight="58.0" prefWidth="236.0" GridPane.columnIndex="2" GridPane.rowIndex="13">
+                     <children>
+                        <TextField fx:id="expireDateText" layoutX="-165.0" layoutY="-51.0" prefHeight="31.0" prefWidth="283.0" promptText="Expire Date" />
+                        <Button layoutX="105.0" layoutY="-53.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="46.0" />
+                        <Label layoutX="-156.0" layoutY="-91.0" prefHeight="43.0" prefWidth="142.0" text="Saved Expire Date :" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="5.0" prefWidth="197.0" GridPane.rowIndex="15">
+                     <children>
+                        <DatePicker fx:id="expireDate" layoutX="-1.0" layoutY="-31.0" prefHeight="30.0" prefWidth="198.0" promptText="Expire Date " />
+                        <Label layoutX="-1.0" layoutY="-59.0" prefHeight="30.0" prefWidth="186.0" text="Select New expire Date" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="18">
+                     <children>
+                        <Button fx:id="save" layoutX="-49.0" layoutY="-3.0" mnemonicParsing="false" onAction="#save" prefHeight="33.0" prefWidth="186.0" text="Save" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
